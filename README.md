@@ -22,7 +22,6 @@ Entweder `/plugin` eingeben und aus der Liste wählen, oder direkt:
 | KI-Harness-Architekt | Das kleinstmögliche KI-Setup für deine echte Arbeit | `/plugin install ki-harness-architekt@marlon-skills` |
 | Video-Prompt-Builder | Shot-für-Shot-Prompts für Seedance und Higgsfield | `/plugin install video-prompt-builder@marlon-skills` |
 | Claude als Videoeditor | Anleitung: Claude schneidet dein Video per Beschreibung (Remotion) | `/plugin install ugc-editor-letzter-retake@marlon-skills` |
-| Digitaler Fußabdruck | Deine Daten aus Datenhändlern und Suchseiten löschen | `/plugin install digitaler-fussabdruck@marlon-skills` |
 | Digitaler Fußabdruck Pro | Deine Daten im Netz finden und löschen lassen, in jedem Land, ohne Technikwissen | `/plugin install digitaler-fussabdruck-pro@marlon-skills` |
 | Bewerbungs-Coach | Lebenslauf, Anschreiben, Interview, Gehalt, ohne dass Claude etwas erfindet | `/plugin install bewerbungs-coach@marlon-skills` |
 | Loop-Engineer | Aufgaben, die von allein laufen, statt Prompts, die dich festhalten | `/plugin install loop-engineer@marlon-skills` |

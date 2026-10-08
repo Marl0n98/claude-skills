@@ -37,12 +37,6 @@
       "category": "productivity"
     },
     {
-      "name": "digitaler-fussabdruck",
-      "description": "Deine Daten aus Datenhändlern und Suchseiten löschen",
-      "source": "./plugins/digitaler-fussabdruck",
-      "category": "productivity"
-    },
-    {
       "name": "digitaler-fussabdruck-pro",
       "description": "Deine Daten im Netz finden und löschen lassen, in jedem Land, ohne Technikwissen",
       "source": "./plugins/digitaler-fussabdruck-pro",
