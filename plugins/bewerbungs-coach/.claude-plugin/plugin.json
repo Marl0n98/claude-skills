@@ -1,0 +1,9 @@
+{
+  "name": "bewerbungs-coach",
+  "description": "Lebenslauf, Anschreiben, Interview, Gehalt, ohne dass Claude etwas erfindet",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

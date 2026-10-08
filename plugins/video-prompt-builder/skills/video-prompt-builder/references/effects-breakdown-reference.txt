@@ -1,0 +1,157 @@
+# VIDEO-EFFEKT-BREAKDOWN
+Referenz: Athletischer Brand Film (Laufschuh-Marke) — 21,2 s
+
+## SHOT-FÜR-SHOT EFFEKT-TIMELINE
+
+SHOT 1 (00:00-00:01) — Eröffnungs-Impact
+• EFFEKT: Speed Ramp (Verlangsamung) + starker Motion Blur
+• Kamera kommt mitten aus einem Whip Pan mit extremem diagonalem Motion Blur und Lichtstreifen
+• Dutch Angle von etwa 30° während der Übergangsphase
+• Geschwindigkeit fällt schnell von Unschärfe auf ein erkennbares Bild ab
+• Erzeugt explosive Energie: Der Zuschauer wird in die Action geworfen
+
+SHOT 2 (00:01-00:02) — Stadion-Totale
+• EFFEKT: Vertikale Spiegelung/Symmetrie
+• Das gesamte Bild wird an der vertikalen Mittelachse gespiegelt
+• Erzeugt eine surreale, kaleidoskopische Verdopplung der Stadionarchitektur
+• Zwei identische Profilansichten des Subjekts stehen sich gegenüber
+• Statische Komposition, keine Kamerabewegung während des Spiegeleffekts
+
+SHOT 3 (00:02-00:03) — Tracking aus der Vogelperspektive
+• EFFEKT: Weißer Bloom Flash (Einstieg) + Digitalzoom (Scale-in) + Kamerawackeln/Vibration
+• Kommt aus einem weißen Bloom-Übergang: überbelichtete Ebene mit ausgefressenen Lichtern, schwache Umrisse des Läufers durch das Leuchten sichtbar
+• Aggressiver Digitalzoom, der IN das Bild stößt (Skalierung nimmt zu)
+• Hochfrequente Post-Production-Kameravibration obendrauf
+• Speed Ramp: Material läuft während des Zooms schnell
+• Drei Effekte gleichzeitig gestapelt, der intensivste Moment im Schnitt
+
+SHOT 4 (00:03-00:04) — Laufen aus der Froschperspektive
+• EFFEKT: Speed Ramp (Beschleunigung)
+• Weiche Beschleunigung von Slow Motion auf Normalgeschwindigkeit
+• In-Camera-Aufnahme mit hoher Bildrate, in der Post verarbeitet
+• Die Rampe wirkt organisch, nicht ruckartig: kontrollierter Kraftaufbau
+
+SHOT 5 (00:04-00:06) — Profil-Tracking
+• EFFEKT: Speed Ramp + Whip-Pan-Ausstieg
+• Tracking in Normalgeschwindigkeit, das beschleunigt
+• Geht mit einem Whip Pan (rechts nach links) raus, erzeugt einen Motion-Blur-Schmier als Übergangsmittel
+• Der Whip Pan verbindet diesen Shot ohne klassischen Schnitt mit dem nächsten
+
+SHOT 6 (00:06-00:07) — Startblöcke / Detail
+• EFFEKT: Slow Motion
+• In-Camera-Aufnahme mit hoher Bildrate (vermutlich 120 fps+, gerendert bei 24 fps)
+• Etwa 20 bis 25 % Geschwindigkeit, sehr langsam
+• Betont Muskelspannung und Mikrobewegungen
+• Keine zusätzlichen digitalen Effekte: Die Slow Motion IST der Effekt
+
+SHOT 7 (00:07-00:08) — Mehrfachbelichtungs-Klon-Sequenz
+• EFFEKT: Komposit-Time-Slice / stroboskopischer Klon
+• 8+ Instanzen des Läufers an verschiedenen Positionen auf der Bahn
+• Aufgebaut aus einer statischen Hintergrundplatte mit rotoskopiertem Läufer, an mehreren Zeitpositionen einkomponiert
+• Ghosting/Deckkraft: Instanzen gehen von ca. 30 bis 50 % Deckkraft (frühe Geister) zu voller Deckkraft (Endposition)
+• Der Effekt baut sich über den Shot auf: Frühe Frames zeigen schwache Geister, spätere alle 8+ Instanzen in voller Deckkraft
+• Das ist der SIGNATURE VISUAL EFFECT des Videos
+
+SHOT 8 (00:08-00:09) — Stehende Pose
+• EFFEKT: Digitalzoom-"Pump" (schnelles Scale-in/out) + Kamerawackeln/Jitter
+• Kurzer Skalierungspuls: Das Bild stößt rein und setzt sich dann
+• Post-Production-Kamerajitter gibt einer statischen Komposition organische Energie
+• Erzeugt Impact in einem Moment, der sonst ein Standbild wäre
+
+SHOT 9 (00:09-00:10) — Schuh Extreme Close-up
+• EFFEKT: Schärfeverlagerung (Rack Focus)
+• In-Camera-Verschiebung der Schärfentiefe
+• Keine digitale Manipulation, rein optischer Effekt
+• Sauber, kontrolliert, technisch
+
+SHOT 10 (00:10-00:11) — Fußaufprall
+• EFFEKT: Speed Ramp (Slow Motion beim Fersenaufsatz)
+• Hochintensive Slow Motion im Moment des Kontakts
+• Etwa 15 bis 20 % Geschwindigkeit am langsamsten Punkt
+• Kann eine leichte Rampe zurück auf Normalgeschwindigkeit beim Ausstieg enthalten
+
+SHOT 11 (00:11-00:12) — Gehen / Profil
+• EFFEKT: Post-Production-Bildrotation
+• Das gesamte Bild rotiert im Uhrzeigersinn um etwa 15 bis 20°
+• Erzeugt einen Dutch Angle / gekippten Horizont
+• Die Rotation passiert sichtbar WÄHREND des Shots (kein statischer Kipp)
+• Gibt einem ruhigen Geh-Shot eine subtile Desorientierung/Dynamik
+
+SHOT 12 (00:12-00:14) — Himmel aus der Froschperspektive / Dehnen
+• EFFEKT: Digitalzoom (Scale-out / Pull-back)
+• Das Bild weitet sich allmählich oder zieht sich vom Subjekt zurück
+• Richtung: nach oben zum Himmel, erzeugt ein aufstrebendes "Öffnen"
+• Langsam, kontrolliert, die Gegenenergie zum Zoom-in aus Shot 3
+
+SHOT 13-14 (00:14-00:20) — Brand Card / Logo / Abschluss
+• EFFEKT: Blende auf Brand Card
+• Übergang auf blauen Himmel als Hintergrund mit animiertem Markenlogo
+• Letzter Schnitt auf Produkt-Makro (Schuh wird geschnürt)
+• Die Logo-Animation ist sauber, minimal: Die Effektenergie hat sich vollständig aufgelöst
+
+## MASTER-EFFEKT-INVENTAR
+
+1. SPEED RAMPING (5x verwendet)
+— Shots 1, 3, 4, 5, 10
+— Sowohl Beschleunigung als auch Verlangsamung
+— Das primäre kinetische Werkzeug des Schnitts
+2. SLOW MOTION (2x verwendet)
+— Shots 6, 10
+— Tiefe Slow-Mo (15 bis 25 % Geschwindigkeit)
+— Betonung physischer Details
+3. KAMERAWACKELN/VIBRATION (2x verwendet)
+— Shots 3, 8
+— Hochfrequenter Post-Production-Jitter
+— Gibt Schlüsselmomenten Energie und Impact
+4. DIGITALZOOM-PUNCH (3x verwendet)
+— Shots 3 (Scale-in), 8 (Pump), 12 (Scale-out)
+— Schnelle Skalierungswechsel erzeugen körperlich spürbaren Impact
+— Shot 3 ist aggressiver Zoom-in, Shot 12 ein sanfter Pull-out
+5. BILDROTATION (1x verwendet)
+— Shot 11
+— Ca. 15 bis 20° Roll im Uhrzeigersinn
+— Gibt dem Geh-Shot Dynamik
+6. SPIEGELUNG/SYMMETRIE (1x verwendet)
+— Shot 2
+— Spiegelung des Stadion-Shots an der vertikalen Achse
+— Erzeugt einen surrealen geometrischen Moment
+7. WEISSER BLOOM FLASH (1x verwendet)
+— Shot 3 Einstieg
+— Überbelichteter Blitz, durch den schwach Bildinhalt sichtbar bleibt
+— Funktioniert als Übergang mit hoher Energie
+8. WHIP PAN (1x verwendet)
+— Shot 5 Ausstieg
+— Motion-Blur-Schmier von rechts nach links
+— Verbindet Shots ohne klassischen Schnitt
+9. MEHRFACHBELICHTUNGS-KLON (1x verwendet)
+— Shot 7
+— 8+ Instanzen mit aufbauender Deckkraft
+— Der Signature Visual Effect
+10. ZOOM PUMP (1x verwendet)
+— Shot 8
+— Kurzer Scale-in/out-Puls
+— Impact-Betonung auf statischem Shot
+11. SCHÄRFEVERLAGERUNG (1x verwendet)
+— Shot 9
+— In-Camera Rack Focus
+— Sauberer technischer Effekt
+12. MOTION BLUR ALS ÜBERGANG (2x verwendet)
+— Shots 1 (Einstieg), 5 (Ausstieg)
+— Starke gerichtete Unschärfe, die Shots verbindet
+— Erzeugt ein Gefühl von Geschwindigkeit
+
+## EFFEKT-DICHTE-KARTE
+
+00:00-00:03 = HOHE DICHTE (Speed Ramp, Spiegelung, Bloom, Zoom, Wackeln — 6 Effekte in 3 s)
+00:03-00:06 = MITTLERE DICHTE (Speed Ramps, Whip Pan — 3 Effekte in 3 s)
+00:06-00:09 = HOHE DICHTE (Slow-Mo, Klon-Komposit, Zoom Pump, Wackeln — 4 Effekte in 3 s)
+00:09-00:12 = MITTLERE DICHTE (Schärfeverlagerung, Slow-Mo, Rotation — 3 Effekte in 3 s)
+00:12-00:20 = NIEDRIGE DICHTE (sanfter Zoom-out, Blende auf Marke — 2 Effekte in 8 s)
+
+Die Effekte folgen demselben DREI-AKT-Energiebogen wie der Schnitt selbst:
+Akt 1 (0-6 s): EXPLOSIV — maximale Effektdichte, Tempo, Energie
+Akt 2 (6-12 s): KONTROLLIERT — Signature-Effekte, bewusste Platzierung
+Akt 3 (12-20 s): AUFGELÖST — Effekte ziehen sich zurück, Ruhe übernimmt
+
+================================================================
+ENDE DES DOKUMENTS

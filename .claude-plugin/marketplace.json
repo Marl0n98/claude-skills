@@ -1,0 +1,100 @@
+{
+  "name": "marlon-skills",
+  "description": "Marlons Claude-Skills: fertige Fähigkeiten für Claude Code, mit einem Befehl installiert.",
+  "owner": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  },
+  "plugins": [
+    {
+      "name": "humanizer",
+      "description": "Anleitung: Text klingt nicht mehr nach KI (DE + EN)",
+      "source": "./plugins/humanizer",
+      "category": "productivity"
+    },
+    {
+      "name": "llm-council",
+      "description": "5 KI-Berater statt einer Antwort",
+      "source": "./plugins/llm-council",
+      "category": "productivity"
+    },
+    {
+      "name": "ki-harness-architekt",
+      "description": "Das kleinstmögliche KI-Setup für deine echte Arbeit",
+      "source": "./plugins/ki-harness-architekt",
+      "category": "productivity"
+    },
+    {
+      "name": "video-prompt-builder",
+      "description": "Shot-für-Shot-Prompts für Seedance und Higgsfield",
+      "source": "./plugins/video-prompt-builder",
+      "category": "productivity"
+    },
+    {
+      "name": "ugc-editor-letzter-retake",
+      "description": "Anleitung: Claude schneidet dein Video per Beschreibung (Remotion)",
+      "source": "./plugins/ugc-editor-letzter-retake",
+      "category": "productivity"
+    },
+    {
+      "name": "digitaler-fussabdruck",
+      "description": "Deine Daten aus Datenhändlern und Suchseiten löschen",
+      "source": "./plugins/digitaler-fussabdruck",
+      "category": "productivity"
+    },
+    {
+      "name": "digitaler-fussabdruck-pro",
+      "description": "Deine Daten im Netz finden und löschen lassen, in jedem Land, ohne Technikwissen",
+      "source": "./plugins/digitaler-fussabdruck-pro",
+      "category": "productivity"
+    },
+    {
+      "name": "bewerbungs-coach",
+      "description": "Lebenslauf, Anschreiben, Interview, Gehalt, ohne dass Claude etwas erfindet",
+      "source": "./plugins/bewerbungs-coach",
+      "category": "productivity"
+    },
+    {
+      "name": "loop-engineer",
+      "description": "Aufgaben, die von allein laufen, statt Prompts, die dich festhalten",
+      "source": "./plugins/loop-engineer",
+      "category": "productivity"
+    },
+    {
+      "name": "vertrags-check",
+      "description": "Verträge, AGB und NDAs mit Ampel prüfen, bevor du unterschreibst",
+      "source": "./plugins/vertrags-check",
+      "category": "productivity"
+    },
+    {
+      "name": "aktien-analyst",
+      "description": "Jede Aktie in 5 Schritten in unter 5 Minuten",
+      "source": "./plugins/aktien-analyst",
+      "category": "productivity"
+    },
+    {
+      "name": "script-writing",
+      "description": "Reel-Skripte mit offenen Loops, die keiner wegwischt",
+      "source": "./plugins/script-writing",
+      "category": "productivity"
+    },
+    {
+      "name": "divergence",
+      "description": "Ideen, die keine KI von allein hätte",
+      "source": "./plugins/divergence",
+      "category": "productivity"
+    },
+    {
+      "name": "google-ads-auditor",
+      "description": "Verbranntes Budget in Euro finden",
+      "source": "./plugins/google-ads-auditor",
+      "category": "productivity"
+    },
+    {
+      "name": "email-marketing-auditor",
+      "description": "Wo dein E-Mail-Marketing Umsatz liegen lässt",
+      "source": "./plugins/email-marketing-auditor",
+      "category": "productivity"
+    }
+  ]
+}

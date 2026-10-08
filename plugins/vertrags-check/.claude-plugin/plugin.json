@@ -1,0 +1,9 @@
+{
+  "name": "vertrags-check",
+  "description": "Verträge, AGB und NDAs mit Ampel prüfen, bevor du unterschreibst",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

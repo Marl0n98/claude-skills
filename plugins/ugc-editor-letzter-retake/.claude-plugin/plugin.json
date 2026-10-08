@@ -1,0 +1,9 @@
+{
+  "name": "ugc-editor-letzter-retake",
+  "description": "Anleitung: Claude schneidet dein Video per Beschreibung (Remotion)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

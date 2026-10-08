@@ -1,0 +1,9 @@
+{
+  "name": "ki-harness-architekt",
+  "description": "Das kleinstmögliche KI-Setup für deine echte Arbeit",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

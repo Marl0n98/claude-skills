@@ -1,0 +1,9 @@
+{
+  "name": "google-ads-auditor",
+  "description": "Verbranntes Budget in Euro finden",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

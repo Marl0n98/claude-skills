@@ -1,0 +1,9 @@
+{
+  "name": "llm-council",
+  "description": "5 KI-Berater statt einer Antwort",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

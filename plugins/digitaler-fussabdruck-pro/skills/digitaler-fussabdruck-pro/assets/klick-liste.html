@@ -1,0 +1,177 @@
+<!doctype html>
+<!--
+  VORLAGE: Klick-Liste für den Nutzer (Schritt 4c im SKILL.md)
+
+  So füllst du sie:
+  1. Ersetze im <script> das Array TASKS durch die echten Aufgaben aus dem Protokoll.
+     Felder pro Aufgabe:
+       id        eindeutige kurze Kennung (z. B. "truecaller")
+       nr        laufende Nummer wie im Protokoll
+       basket    "green" (mache ich / nur Senden drücken), "yellow" (2-Minuten-Aufgabe), "red" (Ausweis/Brief/Telefon)
+       title     Name der Seite
+       minutes   geschätzte Minuten
+       needs     was man braucht, z. B. "Handy", "Postfach", "Drucker"
+       url       direkter Link (optional)
+       steps     Array kurzer Schritte in einfacher Sprache
+       copy      Array {label, value} mit Werten zum Kopieren (Nummer, Name, Profil-URL, Text)
+       mail      optional {to, subject, body} als KLARTEXT (nicht kodieren) → Kopier-Knöpfe für An/Betreff/Text plus mailto-Knopf
+       warn      optional Warnhinweis
+  2. Setze PERSON auf den Vornamen des Nutzers (nur Vorname) und STORAGE_KEY auf einen eindeutigen Wert.
+  3. Keine sensiblen Daten einbauen, die nicht für eine Aufgabe nötig sind.
+  Die Häkchen werden im Browser gespeichert (localStorage) und funktionieren auch ohne Speicher.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deine Klick-Liste</title>
+<style>
+  :root {
+    --bg: #f7f6f2; --card: #ffffff; --text: #1d1d1b; --muted: #6b6a66; --line: #e4e2dc;
+    --accent: #2f6f4f; --accent-text: #ffffff; --green: #2f7d4f; --yellow: #b7791f; --red: #b83b3b;
+    --done: #eef6f0; --warn-bg: #fff6e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161614; --card: #22221f; --text: #efeee9; --muted: #a3a29c; --line: #3a3934;
+      --accent: #6cc295; --accent-text: #0f1a14; --green: #6cc295; --yellow: #e2b35a; --red: #ef7f7f;
+      --done: #1d2a22; --warn-bg: #33291a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161614; --card: #22221f; --text: #efeee9; --muted: #a3a29c; --line: #3a3934;
+    --accent: #6cc295; --accent-text: #0f1a14; --green: #6cc295; --yellow: #e2b35a; --red: #ef7f7f;
+    --done: #1d2a22; --warn-bg: #33291a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .intro { color: var(--muted); margin: 0 0 20px; }
+  .progress { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 20px; position: sticky; top: 8px; z-index: 2; }
+  .bar { height: 10px; background: var(--line); border-radius: 99px; overflow: hidden; margin-top: 8px; }
+  .bar > div { height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+  h2 { font-size: 1.15rem; margin: 28px 0 10px; display: flex; gap: 8px; align-items: center; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+  .card.done { background: var(--done); }
+  .card.done .body { display: none; }
+  .head { display: flex; gap: 12px; align-items: flex-start; }
+  .head input { width: 26px; height: 26px; margin-top: 2px; flex-shrink: 0; accent-color: var(--accent); cursor: pointer; }
+  .title { font-weight: 650; }
+  .meta { color: var(--muted); font-size: .9rem; }
+  ol { margin: 10px 0 6px; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .copyline { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+  .copyline code { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: .95rem; word-break: break-all; flex: 1 1 200px; }
+  .copyline span { color: var(--muted); font-size: .9rem; min-width: 90px; }
+  .copyline code.mailbody { white-space: pre-wrap; max-height: 9em; overflow: auto; }
+  button, a.btn { font: inherit; font-size: .95rem; border-radius: 10px; padding: 8px 14px; border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer; text-decoration: none; display: inline-block; }
+  a.btn.primary, button.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+  .warn { background: var(--warn-bg); border-radius: 8px; padding: 8px 10px; margin-top: 10px; font-size: .95rem; }
+  .toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 8px 14px; border-radius: 99px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  .inbox { background: var(--card); border: 1px dashed var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Deine Klick-Liste</h1>
+  <p class="intro" id="intro"></p>
+  <div class="progress" aria-live="polite">
+    <strong id="count"></strong>
+    <div class="bar"><div id="fill"></div></div>
+  </div>
+  <div id="list"></div>
+  <div class="inbox">
+    <strong>Postfach-Runde</strong>
+    <p class="meta">Nach den Formularen: Öffne dein Postfach einmal und klicke alle Bestätigungslinks nacheinander. Such nacheinander nach diesen Wörtern und schau auch im Spam-Ordner nach: <strong>bestätigen, verify, confirm, opt-out, removal</strong>.</p>
+    <p class="meta">Nutzt du Gmail? Dann findet dieser eine Suchbegriff alles auf einmal:</p>
+    <div class="copyline"><code id="gmailq">newer_than:2d (opt-out OR optout OR removal OR verify OR confirm OR suppression OR unlist OR privacy OR bestätigen OR Datenschutz)</code><button data-copy-el="gmailq">Kopieren</button></div>
+  </div>
+</main>
+<div class="toast" id="toast">Kopiert</div>
+<script>
+const PERSON = "VORNAME";
+const STORAGE_KEY = "klickliste-VORLAGE";
+const TASKS = [
+  {
+    id: "beispiel", nr: 1, basket: "yellow", title: "Beispielseite", minutes: 2, needs: "Browser",
+    url: "https://example.com/opt-out",
+    steps: ["Öffne den Link.", "Trag deine Nummer ein.", "Setz das Häkchen \"Ich bin kein Roboter\".", "Klick auf \"Remove\"."],
+    copy: [{ label: "Nummer", value: "+49 000 0000000" }],
+    warn: "Diese Karte ist nur ein Muster und wird durch echte Aufgaben ersetzt."
+  }
+];
+
+const BASKETS = {
+  green:  { label: "Nur noch absenden", color: "var(--green)" },
+  yellow: { label: "2-Minuten-Aufgaben", color: "var(--yellow)" },
+  red:    { label: "Später: Ausweis, Brief oder Telefon", color: "var(--red)" }
+};
+
+let state = {};
+try { state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { state = {}; }
+function save() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {} }
+
+function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 1200); }
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); toast("Kopiert"); }
+  catch (e) {
+    const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast("Kopiert"); } catch (e2) { toast("Bitte markieren und kopieren"); }
+    ta.remove();
+  }
+}
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v); }
+  for (const k of kids.flat()) if (k != null) n.append(k.nodeType ? k : document.createTextNode(k));
+  return n;
+}
+function mailto(m) { return "mailto:" + m.to + "?subject=" + encodeURIComponent(m.subject) + "&body=" + encodeURIComponent(m.body); }
+
+function render() {
+  document.getElementById("intro").textContent = (PERSON && PERSON !== "VORNAME" ? PERSON + ", hier" : "Hier") + " ist alles, was du selbst kurz erledigen musst. Schnellste Aufgaben zuerst. Hake ab, was erledigt ist; die Liste merkt sich das.";
+  const list = document.getElementById("list"); list.innerHTML = "";
+  for (const key of ["green", "yellow", "red"]) {
+    const tasks = TASKS.filter(t => t.basket === key).sort((a, b) => (a.minutes || 0) - (b.minutes || 0));
+    if (!tasks.length) continue;
+    const mins = tasks.reduce((s, t) => s + (t.minutes || 0), 0);
+    list.append(el("h2", {}, el("span", { class: "dot", style: "background:" + BASKETS[key].color }), BASKETS[key].label + " · ca. " + mins + " Min"));
+    for (const t of tasks) {
+      const done = !!state[t.id];
+      const cb = el("input", { type: "checkbox", "aria-label": "Erledigt: " + t.title, onchange: e => { state[t.id] = e.target.checked; save(); render(); } });
+      cb.checked = done;
+      const body = el("div", { class: "body" });
+      if (t.steps && t.steps.length) body.append(el("ol", {}, t.steps.map(s => el("li", {}, s))));
+      for (const c of (t.copy || [])) body.append(el("div", { class: "copyline" }, el("span", {}, c.label), el("code", {}, c.value), el("button", { onclick: () => copyText(c.value) }, "Kopieren")));
+      const row = el("div", { class: "row" });
+      if (t.url) row.append(el("a", { class: "btn primary", href: t.url, target: "_blank", rel: "noopener" }, "Link öffnen"));
+      if (t.mail) {
+        body.append(el("p", { class: "meta" }, "So geht's: Öffne dein E-Mail-Postfach (z. B. GMX, web.de, Gmail) → Neue E-Mail → kopiere nacheinander An, Betreff und Text von hier und füge sie dort ein → Senden."));
+        body.append(el("div", { class: "copyline" }, el("span", {}, "An"), el("code", {}, t.mail.to), el("button", { onclick: () => copyText(t.mail.to) }, "Kopieren")));
+        body.append(el("div", { class: "copyline" }, el("span", {}, "Betreff"), el("code", {}, t.mail.subject), el("button", { onclick: () => copyText(t.mail.subject) }, "Kopieren")));
+        body.append(el("div", { class: "copyline" }, el("span", {}, "Text"), el("code", { class: "mailbody" }, t.mail.body), el("button", { onclick: () => copyText(t.mail.body) }, "Kopieren")));
+        row.append(el("a", { class: "btn", href: mailto(t.mail) }, "Im E-Mail-Programm öffnen"));
+      }
+      if (row.childNodes.length) body.append(row);
+      if (t.warn) body.append(el("div", { class: "warn" }, "⚠️ " + t.warn));
+      list.append(el("div", { class: "card" + (done ? " done" : "") },
+        el("div", { class: "head" }, cb, el("div", {},
+          el("div", { class: "title" }, (t.nr ? t.nr + ". " : "") + t.title),
+          el("div", { class: "meta" }, "ca. " + (t.minutes || 1) + " Min" + (t.needs ? " · du brauchst: " + t.needs : "")))),
+        body));
+    }
+  }
+  const total = TASKS.length, doneCount = TASKS.filter(t => state[t.id]).length;
+  document.getElementById("count").textContent = doneCount + " von " + total + " erledigt" + (doneCount === total && total ? " – stark! Schreib Claude, dass du fertig bist." : "");
+  document.getElementById("fill").style.width = (total ? doneCount / total * 100 : 0) + "%";
+}
+document.querySelectorAll("[data-copy-el]").forEach(b => b.addEventListener("click", () => copyText(document.getElementById(b.dataset.copyEl).textContent)));
+render();
+</script>
+</body>
+</html>

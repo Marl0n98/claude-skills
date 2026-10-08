@@ -1,0 +1,9 @@
+{
+  "name": "aktien-analyst",
+  "description": "Jede Aktie in 5 Schritten in unter 5 Minuten",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

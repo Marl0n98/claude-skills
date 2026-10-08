@@ -1,0 +1,9 @@
+{
+  "name": "humanizer",
+  "description": "Anleitung: Text klingt nicht mehr nach KI (DE + EN)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

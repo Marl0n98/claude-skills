@@ -1,0 +1,9 @@
+{
+  "name": "loop-engineer",
+  "description": "Aufgaben, die von allein laufen, statt Prompts, die dich festhalten",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

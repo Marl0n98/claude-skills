@@ -1,0 +1,9 @@
+{
+  "name": "video-prompt-builder",
+  "description": "Shot-für-Shot-Prompts für Seedance und Higgsfield",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}

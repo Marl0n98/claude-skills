@@ -1,0 +1,9 @@
+{
+  "name": "email-marketing-auditor",
+  "description": "Wo dein E-Mail-Marketing Umsatz liegen lässt",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marlon Drahn",
+    "url": "https://gptmarlon.com"
+  }
+}
